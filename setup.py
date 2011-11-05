@@ -11,7 +11,7 @@ setup(name=name,
 """,
       classifiers=[], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
       keywords='usinasite style CSS',
-      author='Olivier Larchev\xe1\xbb\xc3\xc3\xaaque',
+      author='Olivier Larchev\xc3\xaaque',
       author_email='olivier.larcheveque@gmail.com',
       url='https://github.com/olarcheveque/usin.skin',
       license='GPL',
