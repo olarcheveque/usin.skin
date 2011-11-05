@@ -1,0 +1,10 @@
+{% load i18n %}
+
+{% if request.user.is_authenticated %}
+    <span>{{ request.user }} : </span>
+    <a href="{% url logout %}">{% trans "Logout" %}</a>
+    {% block extramenu %}
+    {% endblock extramenu %}
+{% else %}
+    <a href="{% url login %}">{% trans "Login" %}</a>
+{% endif %}

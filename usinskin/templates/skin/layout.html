@@ -1,0 +1,46 @@
+{% load i18n %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{% block title %}{% endblock %}</title>
+    <style type="text/css">{% include "skin/style.css" %}</style>
+    {% block extrahead %}{% endblock %}
+  </head>
+
+  <body class="{% block bodyclass %}{% endblock %}">
+
+    <div id="header">
+        {% include "skin/header.html" %}
+    </div>
+
+    <div id="menu">
+        {% block menu %}
+        {% include "skin/menu.html" %}
+        {% endblock %}
+    </div>
+
+    {% if messages %}
+        <div class="messages">
+            <ul class="messagelist">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="visualClear"></div>
+    {% endif %}
+
+    <div id="main">
+      {% block main %}{% endblock %}
+      <div class="visualClear"></div>
+    </div>
+
+    <div id="footer">
+        {% include "skin/footer.html" %}
+    </div>
+
+</body>
+</html>
