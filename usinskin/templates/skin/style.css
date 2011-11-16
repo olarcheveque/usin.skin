@@ -77,7 +77,7 @@ form, .box { margin: 0.6em 0; padding: 0.8em 1em; border: 6px solid #FFFFFF; bac
 .visualClear {clear: both; display: block;}
 
 /* ids */
-#header p.logo {font-weight: bold; letter-spacing: -0.1em; font-size: 4em; margin-left: -0.06em;}
+#header p.logo {color: #000000; font-weight: bold; letter-spacing: -0.1em; font-size: 4em; margin-left: -0.06em;}
 #header p.slogan {padding: 1em 0 0 1.6em;}
 #header p {float: left;}
 
